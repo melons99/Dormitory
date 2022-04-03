@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.melons.mapper.StudentMapper">
+    <select id="findAll" resultType="Student">
+        select * from dormitory_management.student
+    </select>
+
+    <select id="selectByNumber" parameterType="String" resultType="Student">
+        select * from dormitory_management.student where number = #{number}
+    </select>
+
+    <select id="selectByName" parameterType="String" resultType="Student">
+        select * from dormitory_management.student where name = #{name}
+    </select>
+
+    <select id="selectByBuildingNo" parameterType="String" resultType="Student">
+        select * from dormitory_management.student where buildingNO = #{buildingNo}
+    </select>
+
+    <select id="selectBySet" parameterType="String" resultType="Student">
+        select * from dormitory_management.student
+        <where>
+            <if test="dept != null and dept != '' ">
+                dept = #{dept}
+            </if>
+            <if test="grade != null and grade != '' ">
+                and grade = #{grade}
+            </if>
+            <if test="classes != null and classes != '' ">
+                and classes = #{classes}
+            </if>
+        </where>
+    </select>
+
+
+    <insert id="insert" parameterType="Student">
+        insert into dormitory_management.student (number, name, sex, dept, grade, classes, phone) values (#{number},#{name},#{sex},#{dept},#{grade},#{classes},#{phone})
+    </insert>
+
+    <update id="update" parameterType="Student">
+        UPDATE dormitory_management.student
+        set name=#{name},sex=#{sex},dept=#{dept},grade=#{grade},classes=#{classes},phone=#{phone}
+        where number=#{number}
+    </update>
+
+    <delete id="deleteById" parameterType="String">
+        delete from dormitory_management.student where number = #{number}
+    </delete>
+
+</mapper>

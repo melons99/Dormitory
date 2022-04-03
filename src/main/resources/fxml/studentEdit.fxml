@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="387.0" prefWidth="344.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.melons.controller.StudentEditController">
+   <children>
+      <TextField fx:id="threeField" layoutX="234.0" layoutY="225.0" prefHeight="33.0" prefWidth="73.0" promptText="班级" />
+      <TextField fx:id="twoField" layoutX="103.0" layoutY="225.0" prefHeight="33.0" prefWidth="73.0" promptText="年级" />
+      <TextField fx:id="oneField" layoutX="103.0" layoutY="176.0" prefHeight="33.0" prefWidth="169.0" promptText="请输入学院" />
+      <TextField fx:id="nameField" layoutX="105.0" layoutY="82.0" prefHeight="33.0" prefWidth="169.0" promptText="请输入姓名" />
+      <TextField fx:id="numberField" layoutX="105.0" layoutY="37.0" prefHeight="33.0" prefWidth="169.0" promptText="请输入学号" />
+      <Label layoutX="59.0" layoutY="42.0" prefHeight="22.0" prefWidth="44.0" text="学号：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="87.0" prefHeight="22.0" prefWidth="44.0" text="姓名：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="182.0" prefHeight="22.0" prefWidth="44.0" text="学院：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="230.0" prefHeight="22.0" prefWidth="44.0" text="年级：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="230.0" prefHeight="22.0" prefWidth="44.0" text="班级：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phone" layoutX="105.0" layoutY="271.0" prefHeight="33.0" prefWidth="169.0" promptText="请输入联系电话" />
+      <Label layoutX="59.0" layoutY="277.0" prefHeight="22.0" prefWidth="44.0" text="电话：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="74.0" layoutY="332.0" mnemonicParsing="false" onAction="#mod" prefHeight="33.0" prefWidth="81.0" text="修改" />
+      <Button fx:id="cancelButton" layoutX="177.0" layoutY="332.0" mnemonicParsing="false" onAction="#cancel" prefHeight="33.0" prefWidth="81.0" text="取消" />
+      <Label layoutX="57.0" layoutY="130.0" prefHeight="22.0" prefWidth="44.0" text="性别：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sex" layoutX="107.0" layoutY="130.0" />
+   </children>
+</AnchorPane>

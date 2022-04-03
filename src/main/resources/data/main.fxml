@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="758.0" prefWidth="1159.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.melons.controller.MainController">
+    <children>
+        <TabPane prefHeight="766.0" prefWidth="1167.0" style="-fx-background-color: #eae6e6;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab onSelectionChanged="#log1" text="学生管理">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="stuview" layoutX="3.0" layoutY="184.0" prefHeight="545.0" prefWidth="1161.0">
+                                    <columns>
+                                        <TableColumn fx:id="number" prefWidth="157.0" text="学号" />
+                                        <TableColumn fx:id="name" minWidth="0.0" prefWidth="161.0" text="姓名" />
+                                        <TableColumn fx:id="sex" minWidth="0.0" prefWidth="76.0" text="性别" />
+                                        <TableColumn fx:id="dept" prefWidth="160.0" text="学院" />
+                                        <TableColumn fx:id="grade" prefWidth="114.0" text="年级" />
+                                        <TableColumn fx:id="classes" prefWidth="120.0" text="班级" />
+                                        <TableColumn fx:id="building" prefWidth="97.0" text="楼栋" />
+                                        <TableColumn fx:id="room" prefWidth="102.0" text="房间号" />
+                                        <TableColumn fx:id="phone" prefWidth="173.0" text="联系电话" />
+                                    </columns>
+                                </TableView>
+                                <Button fx:id="add" layoutX="290.0" layoutY="135.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="27.0" prefWidth="84.0" text="添加学生" />
+                                <Button fx:id="delete" layoutX="489.0" layoutY="136.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="26.0" prefWidth="87.0" text="删除学生" />
+                                <Button fx:id="mod" layoutX="388.0" layoutY="135.0" mnemonicParsing="false" onAction="#modStudent" prefHeight="28.0" prefWidth="87.0" text="修改学生" />
+                                <Button layoutX="200.0" layoutY="22.0" mnemonicParsing="false" onAction="#selectByNumber" prefHeight="33.0" prefWidth="104.0" text="根据学号查询" />
+                                <Button layoutX="510.0" layoutY="22.0" mnemonicParsing="false" onAction="#selectByName" prefHeight="33.0" prefWidth="104.0" text="根据姓名查询" />
+                                <Button layoutX="818.0" layoutY="22.0" mnemonicParsing="false" onAction="#selectByBuild" prefHeight="33.0" prefWidth="104.0" text="根据楼栋查询" />
+                                <TextField fx:id="numberField" layoutX="24.0" layoutY="22.0" prefHeight="33.0" prefWidth="169.0" promptText="请输入学号" />
+                                <TextField fx:id="nameField" layoutX="334.0" layoutY="22.0" prefHeight="33.0" prefWidth="169.0" promptText="请输入姓名" />
+                                <TextField fx:id="buildField" layoutX="642.0" layoutY="22.0" prefHeight="33.0" prefWidth="169.0" promptText="请输入楼栋" />
+                                <Button fx:id="findAllButton" layoutX="593.0" layoutY="136.0" mnemonicParsing="false" onAction="#findAll" prefHeight="26.0" prefWidth="121.0" text="查询全部学生信息" />
+                                <TextField fx:id="oneField" layoutX="24.0" layoutY="77.0" prefHeight="33.0" prefWidth="169.0" promptText="请输入学院" />
+                                <TextField fx:id="twoField" layoutX="209.0" layoutY="77.0" prefHeight="33.0" prefWidth="73.0" promptText="年级" />
+                                <TextField fx:id="threeField" layoutX="297.0" layoutY="77.0" prefHeight="33.0" prefWidth="73.0" promptText="班级" />
+                                <Label layoutX="197.0" layoutY="86.0" text="-" />
+                                <Label layoutX="287.0" layoutY="86.0" text="-" />
+                                <Button layoutX="380.0" layoutY="77.0" mnemonicParsing="false" onAction="#selectByThree" prefHeight="33.0" prefWidth="104.0" text="查询" />
+                                <Button layoutX="727.0" layoutY="136.0" mnemonicParsing="false" onAction="#roomSet" prefHeight="26.0" prefWidth="91.0" text="寝室分配" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab onSelectionChanged="#log2" text="寝室管理">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="roomview2" layoutX="439.0" layoutY="136.0" prefHeight="551.0" prefWidth="704.0">
+                                    <columns>
+                                        <TableColumn fx:id="build2" prefWidth="192.0" text="楼栋" />
+                                        <TableColumn fx:id="room2" minWidth="0.0" prefWidth="181.0" text="房间号" />
+                                        <TableColumn fx:id="roomer" minWidth="0.0" prefWidth="166.0" text="入住人数" />
+                                        <TableColumn fx:id="text2" minWidth="0.0" prefWidth="164.0" text="备注" />
+                                    </columns>
+                                </TableView>
+                                <TextField fx:id="buildField1" layoutX="584.0" layoutY="59.0" prefHeight="33.0" prefWidth="85.0" promptText="请输入楼栋" />
+                                <Button layoutX="777.0" layoutY="59.0" mnemonicParsing="false" onAction="#selectRoom" prefHeight="33.0" prefWidth="74.0" text="查询" />
+                                <TextField fx:id="roomField1" layoutX="675.0" layoutY="59.0" prefHeight="33.0" prefWidth="90.0" promptText="请输入房间号" />
+                                <Label layoutX="669.0" layoutY="68.0" text="-" />
+                                <Button fx:id="addBuild" layoutX="83.0" layoutY="634.0" mnemonicParsing="false" onAction="#addBuild" prefHeight="36.0" prefWidth="88.0" text="添加楼栋" />
+                                <TableView fx:id="roomview1" layoutX="31.0" layoutY="64.0" prefHeight="550.0" prefWidth="334.0">
+                                    <columns>
+                                        <TableColumn fx:id="build1" prefWidth="166.0" text="楼栋" />
+                                        <TableColumn fx:id="text1" minWidth="0.0" prefWidth="167.0" text="备注" />
+                                    </columns>
+                                </TableView>
+                                <Button fx:id="deleteBuild" layoutX="214.0" layoutY="634.0" mnemonicParsing="false" onAction="#deleteBuild" prefHeight="36.0" prefWidth="88.0" text="删除楼栋" />
+                                <Button fx:id="deleteRoom" layoutX="925.0" layoutY="84.0" mnemonicParsing="false" onAction="#deleteRoom" prefHeight="34.0" prefWidth="91.0" text="删除房间" />
+                                <Button fx:id="addRoom" layoutX="925.0" layoutY="44.0" mnemonicParsing="false" onAction="#addRoom" prefHeight="31.0" prefWidth="92.0" text="添加房间" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab onSelectionChanged="#log3" text="出入登记">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="goodview" layoutX="24.0" layoutY="405.0" prefHeight="262.0" prefWidth="1119.0">
+                           <columns>
+                              <TableColumn fx:id="no2" text="编号" />
+                              <TableColumn fx:id="number2" prefWidth="126.0" text="学号" />
+                              <TableColumn fx:id="name2" prefWidth="147.0" text="姓名" />
+                              <TableColumn fx:id="phone2" prefWidth="202.0" text="联系方式" />
+                              <TableColumn fx:id="goodstext2" prefWidth="182.0" text="货物信息" />
+                              <TableColumn fx:id="outtime2" prefWidth="185.0" text="搬出时间" />
+                              <TableColumn fx:id="text4" prefWidth="196.0" text="备注" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="519.0" layoutY="14.0" text="外来人员登记">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="541.0" layoutY="369.0" text="货物登记">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="outview" layoutX="24.0" layoutY="51.0" prefHeight="262.0" prefWidth="1119.0">
+                           <columns>
+                              <TableColumn fx:id="no1" prefWidth="75.0" text="编号" />
+                              <TableColumn fx:id="name1" prefWidth="122.0" text="姓名" />
+                              <TableColumn fx:id="phone1" prefWidth="146.0" text="联系方式" />
+                              <TableColumn fx:id="reason1" prefWidth="205.0" text="缘由" />
+                              <TableColumn fx:id="entrytime1" prefWidth="179.0" text="进入时间" />
+                              <TableColumn fx:id="leavetime1" prefWidth="187.0" text="离开时间" />
+                              <TableColumn fx:id="text3" prefWidth="204.0" text="备注" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="908.0" layoutY="325.0" mnemonicParsing="false" onAction="#add1" prefHeight="36.0" prefWidth="91.0" text="登入" />
+                        <Button layoutX="1026.0" layoutY="325.0" mnemonicParsing="false" onAction="#out1" prefHeight="36.0" prefWidth="90.0" text="登出" />
+                        <Button layoutX="1025.0" layoutY="676.0" mnemonicParsing="false" onAction="#del2" prefHeight="36.0" prefWidth="90.0" text="删除" />
+                        <Button layoutX="907.0" layoutY="676.0" mnemonicParsing="false" onAction="#add2" prefHeight="36.0" prefWidth="91.0" text="添加" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

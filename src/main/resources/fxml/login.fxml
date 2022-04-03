@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="loginpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.melons.controller.LoginController">
+   <left>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="209.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="243.0" fitWidth="210.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../avatar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" onMouseDragged="#handle" onMousePressed="#handle" prefHeight="420.0" prefWidth="390.0" style="-fx-background-color: #eae6e6;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="31.0" layoutY="42.0" prefHeight="77.0" prefWidth="339.0" text="学生公寓管理系统" textFill="#9e9393">
+               <font>
+                  <Font name="AdobeHeitiStd-Regular" size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="163.0" prefHeight="15.0" prefWidth="95.0" text="Username" textAlignment="CENTER">
+               <font>
+                  <Font name="Dungeon" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="207.0" prefHeight="15.0" prefWidth="95.0" text="Password" textAlignment="CENTER">
+               <font>
+                  <Font name="Dungeon" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameTextField" layoutX="133.0" layoutY="157.0" opacity="0.5" prefHeight="29.0" prefWidth="212.0" AnchorPane.bottomAnchor="234.0" />
+            <PasswordField fx:id="passwordTextField" layoutX="133.0" layoutY="201.0" opacity="0.5" prefHeight="29.0" prefWidth="212.0" />
+            <Button fx:id="loginButton" layoutX="94.0" layoutY="292.0" mnemonicParsing="false" onAction="#loginButtonAction" opacity="0.87" prefHeight="41.0" prefWidth="212.0" style="-fx-background-color: #9e9393;" text="Login">
+               <font>
+                  <Font name="Dungeon" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="94.0" layoutY="347.0" mnemonicParsing="false" onAction="#registerButtonAction" opacity="0.87" prefHeight="41.0" prefWidth="212.0" style="-fx-background-color: #ffffff;" text="register">
+               <font>
+                  <Font name="Dungeon" size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="loginAlert" fill="#d71919" layoutX="119.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="225.705078125" />
+            <Button layoutX="366.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelButtonAction" opacity="0.7" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #9d0000; -fx-background-radius: 20;" />
+         </children></AnchorPane>
+   </right>
+</BorderPane>

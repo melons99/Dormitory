@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.melons.mapper.RoomMapper">
+
+    <select id="findAllRooms" resultType="Room">
+        select * from dormitory_management.room
+    </select>
+
+    <select id="findByName" parameterType="Map" resultType="Room">
+        select * from dormitory_management.room where (buildname,roomname) = (#{buildname},#{roomname})
+    </select>
+
+    <select id="findByBuild" parameterType="String" resultType="Room">
+        select * from dormitory_management.room where buildname = #{buildname}
+    </select>
+
+    <insert id="insert" parameterType="Room">
+        insert into dormitory_management.room values (#{buildname},#{roomname},#{count},#{roomtext})
+    </insert>
+
+    <delete id="delete" parameterType="Map">
+        delete from dormitory_management.room where (buildname,roomname) = (#{buildname},#{roomname})
+    </delete>
+
+    <select id="selectBySet" parameterType="String" resultType="Room">
+        select * from dormitory_management.room
+        <where>
+            <if test="buildname != null and buildname != '' ">
+                buildname = #{buildname}
+            </if>
+            <if test="roomname != null and roomname !='' ">
+                and roomname = #{roomname}
+            </if>
+        </where>
+    </select>
+
+    <update id="update" parameterType="String">
+        update dormitory_management.student set buildingNO=#{buildname},roomNO = #{roomname} where number = #{number}
+    </update>
+
+    <update id="add" parameterType="String">
+        update dormitory_management.room set count = count + 1 where (buildname,roomname) = (#{buildname},#{roomname})
+    </update>
+
+    <update id="del" parameterType="String">
+        update dormitory_management.room set count = count - 1 where (buildname,roomname) = (#{buildname},#{roomname})
+    </update>
+</mapper>

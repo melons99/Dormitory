@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.melons.mapper.OutsidersMapper">
+
+    <select id="findAll" resultType="Outsiders">
+        select * from dormitory_management.outsiders
+    </select>
+
+    <insert id="insert" parameterType="Outsiders" useGeneratedKeys="true" keyProperty="no">
+        insert into dormitory_management.outsiders (name, phone, reason, entrytime, leavetime, text) values (#{name},#{phone},#{reason},#{entrytime},#{leavetime},#{text})
+    </insert>
+
+    <update id="update" parameterType="Map">
+        update dormitory_management.outsiders set leavetime = #{leavetime} where no = #{no}
+    </update>
+
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="275.0" prefWidth="292.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.melons.controller.BuildAddController">
+   <children>
+      <Label layoutX="42.0" layoutY="44.0" prefHeight="27.0" prefWidth="36.0" text="楼栋:" />
+      <Label layoutX="42.0" layoutY="99.0" prefHeight="27.0" prefWidth="36.0" text="备注:" />
+      <TextField fx:id="buildfield" layoutX="78.0" layoutY="46.0" prefHeight="23.0" prefWidth="173.0" />
+      <TextArea fx:id="textfield" layoutX="78.0" layoutY="99.0" prefHeight="89.0" prefWidth="173.0" />
+      <Button layoutX="54.0" layoutY="213.0" mnemonicParsing="false" onAction="#add" prefHeight="33.0" prefWidth="81.0" text="添加" />
+      <Button fx:id="cancelButton" layoutX="157.0" layoutY="213.0" mnemonicParsing="false" onAction="#cancel" prefHeight="33.0" prefWidth="81.0" text="取消" />
+   </children>
+</AnchorPane>

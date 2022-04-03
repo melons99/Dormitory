@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="loginpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="390.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.melons.controller.ResigterController">
+   <right>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" onMouseDragged="#handle" onMousePressed="#handle" prefHeight="420.0" prefWidth="390.0" style="-fx-background-color: #eae6e6;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="cancelButton" layoutX="366.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelButtonAction" opacity="0.7" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #9d0000; -fx-background-radius: 20;" />
+            <Label layoutX="58.0" layoutY="229.0" prefHeight="15.0" prefWidth="95.0" text="Confrim" textAlignment="CENTER">
+               <font>
+                  <Font name="Dungeon" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="confirmTextField" layoutX="143.0" layoutY="222.0" opacity="0.5" prefHeight="29.0" prefWidth="200.0" promptText="Confirm your password" />
+            <Label layoutX="100.0" layoutY="39.0" prefHeight="80.0" prefWidth="224.0" text="         注册" textFill="#9e9393">
+               <font>
+                  <Font name="AdobeHeitiStd-Regular" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="155.0" prefHeight="15.0" prefWidth="95.0" text="Username" textAlignment="CENTER">
+               <font>
+                  <Font name="Dungeon" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="191.0" prefHeight="15.0" prefWidth="95.0" text="Password" textAlignment="CENTER">
+               <font>
+                  <Font name="Dungeon" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameTextField" layoutX="143.0" layoutY="148.0" opacity="0.5" prefHeight="29.0" prefWidth="200.0" promptText="Please enter your Email" />
+            <PasswordField fx:id="passwordTextField" layoutX="143.0" layoutY="185.0" opacity="0.5" prefHeight="29.0" prefWidth="200.0" promptText="Please your password" />
+            <Button fx:id="signButton" layoutX="94.0" layoutY="292.0" mnemonicParsing="false" onAction="#signButtonAction" opacity="0.87" prefHeight="41.0" prefWidth="212.0" style="-fx-background-color: #9e9393;" text="Sign Up">
+               <font>
+                  <Font name="Dungeon" size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="loginAlert" fill="#d71919" layoutX="106.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="225.705078125" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

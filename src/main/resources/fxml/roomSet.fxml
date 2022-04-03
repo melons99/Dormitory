@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="302.0" prefWidth="324.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.melons.controller.RoomSetController">
+   <children>
+      <Label layoutX="79.0" layoutY="60.0" prefHeight="22.0" prefWidth="44.0" text="学号：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="105.0" prefHeight="22.0" prefWidth="44.0" text="姓名：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="number" layoutX="123.0" layoutY="57.0" prefHeight="29.0" prefWidth="122.0" />
+      <Label fx:id="name" layoutX="123.0" layoutY="102.0" prefHeight="29.0" prefWidth="122.0" />
+      <ComboBox fx:id="buildbox" layoutX="123.0" layoutY="149.0" onMouseClicked="#buildlist" prefHeight="29.0" prefWidth="122.0" promptText="请选择楼栋" />
+      <Label layoutX="79.0" layoutY="152.0" prefHeight="22.0" prefWidth="44.0" text="楼栋：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="197.0" prefHeight="22.0" prefWidth="44.0" text="房间：">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="roombox" layoutX="123.0" layoutY="194.0" onMouseClicked="#roomlist" prefHeight="29.0" prefWidth="122.0" promptText="请选择房间" />
+      <Button fx:id="cancelButton" layoutX="173.0" layoutY="246.0" mnemonicParsing="false" onAction="#cancel" prefHeight="33.0" prefWidth="81.0" text="取消" />
+      <Button layoutX="70.0" layoutY="246.0" mnemonicParsing="false" onAction="#set" prefHeight="33.0" prefWidth="81.0" text="设置" />
+   </children>
+</AnchorPane>

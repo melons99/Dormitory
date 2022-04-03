@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.melons.mapper.GoodsMapper">
+
+    <insert id="insert" parameterType="Goods" >
+        insert into dormitory_management.goods (number, info, time, text) values (#{number},#{info},#{time},#{text})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        delete from dormitory_management.goods where no = #{no}
+    </delete>
+
+    <select id="findAll" resultType="Goods">
+        select no,d.number ,name , phone ,info, time ,text from dormitory_management.goods d left join dormitory_management.student s on d.number = s.number
+    </select>
+
+</mapper>

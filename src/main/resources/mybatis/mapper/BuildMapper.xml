@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.melons.mapper.BuildMapper">
+    <select id="findAllBuilds" resultType="Build">
+        select * from dormitory_management.building
+    </select>
+
+    <insert id="insert" parameterType="Build">
+        insert into dormitory_management.building values (#{buildname},#{buildtext})
+    </insert>
+
+    <update id="delete" parameterType="Build">
+        delete from dormitory_management.building where buildname = #{buildname}
+    </update>
+
+    <select id="findByName" parameterType="String" resultType="Build">
+        select * from dormitory_management.building where buildname = #{buildname}
+    </select>
+
+</mapper>

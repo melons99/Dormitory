@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driverclassname: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Hongkong
+    username: root
+    password: 714684734cyt
+
+#spring:
+#  datasource:
+#    driver-class-name: org.h2.Driver
+#    username: melons
+#    password: 123456
+#    platform: h2
+#    url: jdbc:h2:file:~/data;MV_STORE=false
+#  h2:
+#    console:
+#      enabled: true #开启web console功能
+#      path: /h2-console
+#      settings:
+#        web-allow-others: true
+#
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.MySQLDialect
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.melons.pojo

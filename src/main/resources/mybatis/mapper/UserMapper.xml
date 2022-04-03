@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.melons.mapper.UserMapper">
+    <select id="findAll" resultType="user">
+        select * from dormitory_management.userinfo
+    </select>
+
+    <select id="findUser" parameterType="user" resultType="user">
+
+    </select>
+
+    <select id="loginUser" parameterType="user" resultType="user">
+        select * from dormitory_management.userinfo where username = #{userName} AND password = #{password}
+    </select>
+
+    <insert id="resigter" parameterType="User">
+        insert into dormitory_management.userinfo VALUES (#{userName},#{password})
+    </insert>
+</mapper>

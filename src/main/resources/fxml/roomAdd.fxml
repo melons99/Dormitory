@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="275.0" prefWidth="292.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.melons.controller.RoomAddController">
+   <children>
+      <Label layoutX="42.0" layoutY="44.0" prefHeight="27.0" prefWidth="36.0" text="楼栋:" />
+      <Label layoutX="42.0" layoutY="99.0" prefHeight="27.0" prefWidth="36.0" text="备注:" />
+      <TextArea fx:id="text" layoutX="78.0" layoutY="103.0" prefHeight="85.0" prefWidth="173.0" />
+      <Button layoutX="54.0" layoutY="213.0" mnemonicParsing="false" onAction="#add" prefHeight="33.0" prefWidth="81.0" text="添加" />
+      <Button fx:id="cancelButton" layoutX="157.0" layoutY="213.0" mnemonicParsing="false" onAction="#cancel" prefHeight="33.0" prefWidth="81.0" text="取消" />
+      <TextField fx:id="roomtext" layoutX="78.0" layoutY="73.0" prefHeight="23.0" prefWidth="173.0" />
+      <Label layoutX="34.0" layoutY="71.0" prefHeight="27.0" prefWidth="44.0" text="房间号:" />
+      <ComboBox fx:id="buildbox" layoutX="78.0" layoutY="46.0" onMouseClicked="#buildlist" prefHeight="23.0" prefWidth="173.0" promptText="请选择楼栋" />
+   </children>
+</AnchorPane>
